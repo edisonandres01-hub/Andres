@@ -1,0 +1,51 @@
+# Copia este archivo a config.yaml y ajusta el capital.
+# El bot no envía órdenes. Escribe un plan y un diario en papel.
+
+portfolio_usd: 10000
+max_position_fraction: 0.30
+max_loss_fraction: 0.02
+min_reward_risk: 2.0
+signal_max_age_days: 2
+trend_days: 63
+rsi_period: 14
+swing_lookback: 5
+
+# Acciones por defecto. Cámbialas por las que quieras vigilar.
+watchlist:
+  - AAPL
+  - MSFT
+  - NVDA
+  - AMZN
+  - META
+  - GOOGL
+  - AVGO
+  - TSLA
+  - JPM
+  - V
+  - UNH
+  - XOM
+  - LLY
+  - COST
+  - HD
+  - NFLX
+  - AMD
+  - CRM
+  - BAC
+  - WMT
+
+# Oferta/demanda = acciones en circulación / volumen promedio de 3 meses.
+# El curso pide que ese número sea lo más pequeño posible y no fija un tope.
+# Si pones un número, el largo solo pasa cuando el ratio es menor o igual.
+max_supply_demand_days: null
+
+gap:
+  symbol: SPY
+  min_probability: 0.70
+  gap_range_min: 0.20
+  gap_range_max: 0.40
+  # La hoja dice "35% del ATR", pero la fórmula usa el 30% del rango de ayer.
+  stop_range_fraction: 0.30
+  budget_usd: null
+
+journal_csv: data/journal.csv
+state_json: data/paper_state.json

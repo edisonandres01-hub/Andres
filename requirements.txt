@@ -1,0 +1,2 @@
+# El bot usa solo la biblioteca estándar de Python.
+# No hace falta instalar paquetes para demo, gap, scan ni paper.
